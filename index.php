@@ -2,14 +2,18 @@
 <html lang="">
 <head>
     <meta charset="UTF-8">
-    <title>NIHF Surveys</title>
+    <title>Survey Creator</title>
 	<meta name="Author" content=""/>
-	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
+
 <a href="admin/newsurvey.php">Create a Survey</a>
 <a href="admin/newtype.php">Create a Survey Type</a>
 
+<p id="status"></p>
+<script>
 
+</script>
 </body>
 </html>

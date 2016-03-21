@@ -1,70 +1,29 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <title>Survey Creator</title>
-	<meta name="Author" content=""/>
-	<script src="../../lib/js/jquery-2.2.2.js"></script>
-	<script src="../../lib/js/createType.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
+<?php
+	chdir('../');
+	//echo getcwd();
+	define('DS', DIRECTORY_SEPARATOR);
 
-			$('#surv_create').click(function() {
-				var surv_name = $("#surv_name").val();
-				var surv_id = $("#surv_id").val();
-				var type_id = $("#type_id").val();
-				createSurvey(surv_name, surv_id, type_id);
-			});
+	include getcwd().DS.'lib'.DS.'classes'.DS.'classes_components.php';
+	include getcwd().DS.'lib'.DS.'functions'.DS.'func_generic.php';
 
-		});
+	$form = new component();
+	echo 'Survey Type: ';
+	echo $form->dropdown('types', '');
+		//echo '<br>';
+	//echo 'Surveys: ';
+	//echo $form->dropdown('surveys','AE403213-B39B-CC8A-058D-7B5963B3659A');
+	//echo getGUID();
 
-	</script>
-	<?php
-		chdir('../');
-		//echo getcwd();
-		define('DS', DIRECTORY_SEPARATOR);
-		include getcwd().DS.'lib'.DS.'classes'.DS.'classes_components.php';
-		 include getcwd().DS.'lib'.DS.'functions'.DS.'func_generic.php';
-	?>
-</head>
-<body>
-<form id="typeCreate">
+	echo '<form id="surveyCreate" method="post" >
 
-	<?php
-		$form = new component();
-		echo 'Types: ';
-		echo $form->dropdown('types', '');
-			echo '<br>';
-		echo 'Surveys: ';
-		echo $form->dropdown('surveys','AE403213-B39B-CC8A-058D-7B5963B3659A');
-		//echo getGUID();
+	<label for="surv_name">Survey Name:</label>
+	<input name="surv_name" id="surv_name" ></input>
+	<br>
+	<label for="surv_id">Survey ID:</label>
+	<input name="surv_id" id="surv_id" value="'.getGUID().'" disabled></input>
 
-
-
-	?>
-
-</form>
-	<form id="typeCreate">
-
-		<input name="type_name" id="type_name" ></input>
-		<input name="type_id" id="type_id" value="<?php echo getGUID();?>" ></input>
-
-		<div id='submitBut'>
-			<button id='type_create'>Create Survey</button>
-		</div>
-
-	<?php
-		/*$survey = new surveyCreate;
-		$survey->pushSurvey('Test Insert', getGUID(), getGUID()); */
-
-	?>
-
-
-	</form>
-
-<p id="status"></p>
-<script>
-
-</script>
-</body>
-</html>
+	<div id="submitBut">
+	<button id="surv_create">Create Survey</button>
+	</div>
+	</form>';
+?>
