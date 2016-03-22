@@ -19,7 +19,7 @@ class genericList extends dbConn{
 	}
 }
 
-class surveyCreate extends dbConn {
+class Survey extends dbConn {
 /*
 	function buildSurvey() {
 	}
@@ -52,7 +52,7 @@ class surveyCreate extends dbConn {
 	}
 }
 
-class typeCreate extends dbConn {
+class SurveyType extends dbConn {
 	function pushType($type_name, $type_id) {
 		$status = 'unfinished';
 		$db = new dbConn();
