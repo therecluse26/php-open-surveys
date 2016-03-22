@@ -11,16 +11,15 @@
 	echo 'Surveys: ';
 	echo $form->dropdown('surveys',''); */
 	//echo getGUID();
-	echo '<form id="typeCreate">
+	echo '<form id="typeForm">
 	<label for="type_name">Type Name:</label>
 	<input name="type_name" id="type_name" ></input>
 	<br>
 	<label for="type_id">Type ID:</label>
 	<input name="type_id" id="type_id" value="'.getGUID().'" disabled></input>
-
-	<div id="submitBut">
-		<button id="type_create">Create Type</button>
-	</div>
-	</form>';
+	</form>
+		<div id="submitBut">
+		<button type="button" id="type_create" onClick="createType();">Create Type</button>
+	</div>';
 
 ?>

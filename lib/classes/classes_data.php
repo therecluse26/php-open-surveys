@@ -44,8 +44,10 @@ class surveyCreate extends dbConn {
 	catch(PDOException $ex)
     {
 		$err = "Error code: " . $ex->getMessage();
-		$status = $err;
+		return $err;
+		$status = 'failed';
 		return $status;
+
 	}
 	}
 }
@@ -66,7 +68,8 @@ class typeCreate extends dbConn {
 	catch(PDOException $ex)
     {
 		$err = "Error code: " . $ex->getMessage();
-		$status = $err;
+		return $err;
+		$status = 'failed';
 		return $status;
 	}
 	}

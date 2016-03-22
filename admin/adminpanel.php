@@ -22,8 +22,7 @@ function pageSelect($page){
     <title>Survey Creator</title>
 	<meta name="Author" content=""/>
 	<script src="../lib/js/jquery-2.2.2.js"></script>
-	<script src="../lib/js/createSurvey.js"></script>
-	<script src="../lib/js/createType.js"></script>
+	<script src="../lib/js/createScripts.js"></script>
 
 
 
