@@ -10,6 +10,9 @@ function pageSelect($page){
 	case 'newtype':
 		include 'newtype.php';
 		break;
+	case 'newquestion':
+		include 'newquestion.php';
+		break;
 	default:
 		echo '<h3 id="errmsg">404: Page not found</h3>';
 	};

@@ -5,7 +5,7 @@
 	include getcwd().DS.'lib'.DS.'functions'.DS.'func_generic.php';
 	$form = new component();
 	echo 'Survey Type: ';
-	echo $form->dropdown('types', '');
+	echo $form->dropdown('surveys', '');
 	echo '<form id="surveyCreate" method="post" >
 	<label for="surv_name">Survey Name:</label>
 	<input name="surv_name" id="surv_name" ></input>
