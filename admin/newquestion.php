@@ -55,6 +55,4 @@ echo '<br>
 	<button type="button" id="question_create" onClick="createQuestion();">Create Question</button>
 	</div>
 	</form>';
-
-
 ?>

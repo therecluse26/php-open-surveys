@@ -1,6 +1,6 @@
 <?php
-$host = "BRADMAGYAR1EFB\SQLEXPRESS";
-$username = "surveyuser";
-$password = "Test!ng123!";
+$host = "localhost";
+$username = "root";
+$password = "root";
 $db_name = "InventSurveys";
 ?>
